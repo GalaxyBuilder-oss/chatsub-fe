@@ -1,0 +1,469 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Bagian Home.jsx */
+.home-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.group-button {
+  display: flex;
+  gap: 4px;
+}
+
+.login-button, .register-button {
+  width: 50%;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button{
+  background-color: #007bff;
+  color: white;
+}
+
+.register-button {
+  background-color: #43a027;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+.register-button:hover {
+  background-color: #00b324;
+}
+
+/* Bagian Register.jsx */
+.register-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 2.5rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: 'Inter', sans-serif;
+}
+
+.register-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-container .register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.register-container .register-form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.register-container .register-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  transition: border-color 0.25s ease;
+}
+
+.register-container .register-form input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.register-container .register-button {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-container .register-button:hover {
+  background-color: #2d86c3;
+}
+
+.register-container .home-button {
+  margin-top: 1.2rem;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+  font-size: 0.95rem;
+  padding: 0.65rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.register-container .home-button:hover {
+  background-color: #eaeaea;
+}
+
+/* Bagian Login.jsx */
+.login-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form .input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group input, .input-group label  {
+  text-align: left;
+  width: 50%;
+}
+.login-form input {
+  width: 50%;
+  padding: 0.7rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Bagian Chat.jsx */
+.chat {
+  width: 100%;
+  height: 97vh;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-sidebar {
+  width: 30%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.friend-tabs {
+  max-height: 80%;
+}
+.friend-tabs .tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.friend-tabs .tab-buttons button {
+  width: 35px;
+  height: 35px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-tabs .tab-buttons button.active {
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+.search-input {
+  width: 100%;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.friends-list {
+  max-height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0px;
+  /* box-sizing: border-box; */
+  list-style: none;
+}
+
+.friend-list .friend-profile .last-message {
+  width: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.friends-list > .friend-profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border: 1px #1a1a1a solid;
+  border-radius: 10px;
+  > img {
+    width: 60px;
+    height: 60px;
+    background-color: #747bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+  }
+  > h3 {
+    text-overflow: ellipsis;
+  }
+}
+
+.friends-list > .friend-profile:hover {
+  background-color: #d3d8dc;
+  cursor: pointer;
+}
+
+.request-action {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.chat-body {
+  width: 70%;
+  height: 100%;
+  background-color: #eef2f4;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  > form {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    > input {
+      width: 80%;
+    }
+    > button {
+      content: "➤";
+    }
+  }
+}
+
+.chat-header {
+  margin-bottom: 0.5rem;
+  box-shadow: 0px 2px 0px #21354774;
+}
+
+.chat-header h2 {
+  margin: 0;
+}
+
+.chat-header .status {
+  font-size: 0.85rem;
+  color: gray;
+}
+.chat-header .status.online {
+  color: green;
+}
+.chat-header .status.offline {
+  color: crimson;
+}
+
+/* Chat app like start */
+.message-list {
+  max-width: 100%;
+  max-height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.chat-bubble-sender,
+.chat-bubble-receiver {
+  max-width: 70%;
+  padding: 10px 14px;
+  margin: 0 8px;
+  border-radius: 16px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-bubble-sender {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  border-bottom-right-radius: 0;
+}
+
+.chat-bubble-receiver {
+  align-self: flex-start;
+  background-color: #ffffff;
+  border-bottom-left-radius: 0;
+}
+
+.deleted-chat {
+  font-style: italic;
+}
+
+.chat-bubble-sender::after,
+.chat-bubble-receiver::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.chat-bubble-sender::after {
+  right: -10px;
+  border-left-color: #dcf8c6;
+  border-right: 0;
+  border-top: 0;
+  margin-bottom: -1px;
+}
+
+.chat-bubble-receiver::after {
+  left: -10px;
+  border-right-color: #ffffff;
+  border-left: 0;
+  border-top: 0;
+  margin-bottom: -1px;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: #888;
+  margin-top: 4px;
+  align-self: flex-end;
+}
+/* Chat app like end */
+
+.logout-button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .friends-list > .friend-profile {
+    font-size: 6px;
+    > img {
+      width: 30px;
+      height: 30px;
+      font-size: 8px;
+    }
+  }
+  .message-list {
+    max-height: 73%;
+    padding: 2px 6px;
+  }
+  .message-list, .chat-bubble-receiver, .chat-bubble-sender {
+    font-size: 8px;
+  }
+  .timestamp {
+    font-size: 6px;
+  }
+}
